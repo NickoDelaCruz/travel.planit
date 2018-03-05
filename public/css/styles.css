@@ -7,6 +7,9 @@ body {
   color: white;
 }
 
+
+
+
 .container {
   width: 950px;
   margin: 0 auto;
@@ -28,12 +31,12 @@ color: #ffffff;
 font-size: 48px;
 }
 
-/*li {
+li {
   list-style: none;
   float: left;
   margin-left: 15px;
   padding-top: 15px;
-}*/
+}
 
 ul {
     margin: 0px;
@@ -52,6 +55,25 @@ ul li {
 
 .nav {
   float: right
+}
+
+/*.well {
+  opacity: .25;
+}*/
+/*form {
+  display: inline-block;
+  margin-left: center;
+  margin-right: center;
+  text-align: center;
+
+}*/
+
+
+
+form {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
 }
 
 ul li a {
