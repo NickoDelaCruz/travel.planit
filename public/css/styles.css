@@ -1,6 +1,9 @@
 body {
   width: 100%;
   margin: auto;
+  background-image: url('../img/header.JPG');
+  /*background-size: cover;
+  background-repeat: no-repeat;*/
 }
 
 .container {
