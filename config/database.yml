@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: travel_planit_development
+
+test:
+  adapter: postgresql
+  database: travel_planit_test
