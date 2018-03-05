@@ -12,7 +12,6 @@ body {
 }
 
 .header {
-  background: salmon;
   width: 100%;
   top: 0;
 }
@@ -37,4 +36,14 @@ li {
 
 .nav {
   float: right
+}
+
+a {
+  text-decoration: none;
+  color: #ffff;
+  font-size: 24px;
+}
+
+a:hover {
+    color: white;
 }
