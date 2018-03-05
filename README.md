@@ -1,5 +1,8 @@
 # _Travel Planit_
 
+https://codepen.io/chopfitzroy/pen/JoKMgG
+<!-- CSS carousel ^ -->
+
 #### _DESCRIPTION. {March 2, 2018}_
 
 #### By _Masen Matthews, Nicko Dela Cruz, Emily Watkins, Hannah Lee_
