@@ -1,0 +1,13 @@
+<h2>input latitude and longitude</h2>
+
+<form action="/get_weather" method="post">
+  <label for="latitude">Latitude</label>
+  <input id="latitude" name="latitude" type="text">
+
+  <label for="longitude">Longitude</label>
+  <input id="longitude" name="longitude" type="text">
+
+  <button type="submit">View weather</button>
+</form>
+
+<h3><%= @current %></h3>
