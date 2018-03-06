@@ -6,31 +6,23 @@ require 'json'
 require 'pp'
 require 'pry'
 
-class GetWeather
-  attr_accessor :lat, :lng
+class Weather < ActiveRecord::Base
 
-  def initialize(attributes)
-    @lat = attributes[:lat]
-    @lng = attributes[:lng]
-  end
-
-  darksky = "https://api.darksky.net/forecast/"
-  key = "c8ab0a54e45119b58c074c1c58bb855a"
-  @lat = nil
-  @lng = nil
-  uri = darksky + key + "/" + @lat.to_s + "," + @lng.to_s
-  URL = uri.concat('?&exclude=minutely,hourly')
 
   def get_weather
-    uri = URI.parse(URL)
+    darksky = "https://api.darksky.net/forecast/"
+    key = "c8ab0a54e45119b58c074c1c58bb855a"
+    lat = 45.5231
+    lng = 122.6765
+    url = "#{darksky}#{key}/#{lat},#{lng}"
+
+    uri = URI.parse(url)
     response = Net::HTTP.get_response(uri)
     response.body
   end
 
-  binding.pry
   def forecast
     weather = JSON.parse(self.get_weather)
-
     summary = weather['currently']['summary']
     icon = weather['currently']['icon']
     temperature = weather['currently']['temperature']
@@ -39,5 +31,5 @@ class GetWeather
   end
 end
 
-# weather = GetWeather.new()
+# weather = Weather.new
 # puts weather.forecast

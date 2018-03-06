@@ -1,6 +1,6 @@
 <h2>input latitude and longitude</h2>
 
-<form action="/get_weather" method="post">
+<form action="/weather" method="post">
   <label for="latitude">Latitude</label>
   <input id="latitude" name="latitude" type="text">
 
@@ -10,4 +10,6 @@
   <button type="submit">View weather</button>
 </form>
 
-<h3><%= @current %></h3>
+  <h3><%= @current['summary'] %></h3>
+  <h3><%= @current['icon'] %></h3>
+  <h3><%= @current['temperature'] %></h3>
