@@ -8,6 +8,14 @@ get('/') do
   erb(:index)
 end
 
+get('/activities') do
+  erb(:activities)
+end
+
+get('/user') do
+  erb(:trips)
+end
+
 get('/weather') do
   @current = {}
   erb(:weather)
