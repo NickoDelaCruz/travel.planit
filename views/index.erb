@@ -4,7 +4,7 @@
       <div class="container">
 
           <div class="logo">
-            <h1 id="main-head">Travel Plan.It</h1>
+            <h1 class="main-head">Travel Plan.It</h1>
           </div>
 
       </div>
@@ -28,21 +28,16 @@
 
 <br>
 <form id="center-form"action='/result'>
-  <h4>Plan your trip: Where are you going?</h4>
+  <h4 id="homepage-head">Plan your trip: Where are you going?</h4>
   <div class="form-group">
+    <label for="name">Name</label>
     <input id="name" name="name" type="text" placeholder="Enter your name">
   </div>
-  <div class="form-group">
-    <input id="city_name" name="city_name" type="text" placeholder="Enter city name">
-  </div>
-  <div class="form-group">
-    <input id="state_name" name="state_name" type="text" placeholder="Enter state">
-  </div>
-  <div class="form-group">
+  <!-- <div class="form-group">
     <input id="latitude" name="latitude" type="text" placeholder="Enter location latitude">
   </div>
   <div class="form-group">
     <input id="longitude" name="longitude" type="text" placeholder="Enter location longitude">
-  </div>
+  </div> -->
   <button type="submit" name="submit" class="btn btn-success">Submit</button>
 </form>
