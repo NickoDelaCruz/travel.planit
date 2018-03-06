@@ -1,14 +1,14 @@
-# _Travel Planit_
+# _Travel Plan.It_
 
 https://codepen.io/chopfitzroy/pen/JoKMgG
 <!-- CSS carousel ^ -->
 
-#### _DESCRIPTION. {March 2, 2018}_
+#### _An application that helps the user plan a vacation. {March 2, 2018}_
 
 #### By _Masen Matthews, Nicko Dela Cruz, Emily Watkins, Hannah Lee_
 
 ## Description
-  _DESCRIPTION_
+  _This application allows a user to coordinate important details when planning a trip. _
 
 ## Specifications / User Expectations
 1.
