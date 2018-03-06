@@ -4,7 +4,9 @@
       <div class="logo">
         <h1 class="main-head">Trips</h1>
       </div>
-        <div class="form-group">s
+      <h2>Hello <%= @name %>, let's plan your trip!!</h2>
+      <form action="/user/:id" method="post">
+        <div class="form-group">
           <label for="trip_description">Describe your trip!</label>
           <input id="trip_description" name="trip_description" type="text" placeholder="Describe your trip">
         </div>
@@ -24,6 +26,8 @@
           <label for="longitude">Longitude</label>
           <input id="longitude" name="longitude" type="text" placeholder="Enter location longitude">
         </div>
+          <button type="submit" name="submit" class="btn btn-success">Submit</button>
+      </form>
       </div>
     </div>
   </div>
