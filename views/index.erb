@@ -1,9 +1,43 @@
-<div class="container">
-  <div class="header">
-    <h2 id="main-head">Travel Planit</h2>
+<!-- <div class="well"> -->
+  <div class="container">
+    <div class="header">
+      <div class="container">
+
+          <div class="logo">
+            <h1 class="main-head">Travel Plan.It</h1>
+          </div>
+
+      </div>
+      <div class="nav">
+        <ul>
+            <li><a>Home</a></li>
+            <li><a>About</a>
+              <ul>
+                <li><a>Our Team</a></li>
+                <li><a>Contact</a></li>
+                <li><a>FAQ</a></li>
+              </ul>
+            </li>
+          </ul>
+      </div>
+    </div>
   </div>
-</div>
+<!-- </div> -->
+<!-- HEADER ^^^^^ -->
 
-<div class="container">
 
-</div>
+<br>
+<form id="center-form"action='/result'>
+  <h4 id="homepage-head">Plan your trip: Where are you going?</h4>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" placeholder="Enter your name">
+  </div>
+  <!-- <div class="form-group">
+    <input id="latitude" name="latitude" type="text" placeholder="Enter location latitude">
+  </div>
+  <div class="form-group">
+    <input id="longitude" name="longitude" type="text" placeholder="Enter location longitude">
+  </div> -->
+  <button type="submit" name="submit" class="btn btn-success">Submit</button>
+</form>

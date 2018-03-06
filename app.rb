@@ -29,8 +29,6 @@ post('/user/:id/trip') do
   erb(:trip)
 end
 
-
-
 get('/weather') do
   @current = {}
   erb(:weather)
