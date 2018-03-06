@@ -7,12 +7,18 @@ require 'pp'
 require 'pry'
 
 class GetWeather
+  attr_accessor :lat, :lng
+
+  def initialize(attributes)
+    @lat = attributes[:lat]
+    @lng = attributes[:lng]
+  end
 
   darksky = "https://api.darksky.net/forecast/"
   key = "c8ab0a54e45119b58c074c1c58bb855a"
-  lat = 37.8267
-  lng = -122.4233
-  uri = darksky + key + "/" + lat.to_s + "," + lng.to_s
+  @lat = nil
+  @lng = nil
+  uri = darksky + key + "/" + @lat.to_s + "," + @lng.to_s
   URL = uri.concat('?&exclude=minutely,hourly')
 
   def get_weather
@@ -21,6 +27,7 @@ class GetWeather
     response.body
   end
 
+  binding.pry
   def forecast
     weather = JSON.parse(self.get_weather)
 
@@ -32,5 +39,5 @@ class GetWeather
   end
 end
 
-weather = GetWeather.new
-puts weather.forecast
+# weather = GetWeather.new()
+# puts weather.forecast
