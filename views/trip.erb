@@ -2,10 +2,11 @@
   <div classs="header">
     <div class="container">
       <div class="logo">
-        <h1 class="main-head">Activities</h1>
+        <h1 class="main-head"><%= @trip.destination %> Trip</h1>
       </div>
-      <form action="/user/:id/trip" method="post">
-        <input id="user_id" name="user_id" type="hidden" value="<%= @user.id %>">
+      <p>Date of trip: <%= @trip.date %></p>
+      <form action="/trips/<%= @trip.id %>" method="post">
+        <input id="trip_id" name="trip_id" type="hidden" value="<%= @trip.id %>">
         <label for="description"></label>
         <input type="text" name="description">
 
@@ -13,8 +14,8 @@
       </form>
 
       <ul>
-        <% @activities.each do |activity| %>
-          <li><%= activity.description %></li>
+        <% @trip.activities.each do |trip_activity| %>
+          <li><%= trip_activity.description %></li>
         <% end %>
       </ul>
       </div>

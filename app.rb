@@ -8,25 +8,44 @@ get('/') do
   erb(:index)
 end
 
-post('/') do
-  @user = params['name']
+post('/users') do
+  name = params['name']
+  user = User.create(:name => name)
+  redirect("/users/".concat(user.id.to_s))
+end
+
+get('/users/:id') do
+  @user = User.find(params['id'].to_i)
   erb(:user)
 end
 
-get('/user/:id') do
-  @name = Name.find(params['id'].to_i)
-  destination = params('destination')
-  date = params('date')
-  new_trip = Trip.find_or_create_by(:destination => destination, :date => date)
+post('/users/:id') do
+  destination = params['trip_name']
+  date = params['start_date']
+  user_id = params['user_id']
+  trip = Trip.create(:destination => destination, :date => date, :user_id => user_id)
+  redirect("/trips/".concat(trip.id.to_s))
+end
+
+get('/trips/:id') do
+  @trip = Trip.find(params['id'].to_i)
+  @activities = Activity.all
   erb(:trip)
 end
 
-post('/user/:id/trip') do
-  @name = Name.find(params['id'].to_i)
-  description = params('description')
-  user_id = params('user_id')
-  new_activity = Activity.find_or_create_by(:description => description, :user_id => user_id)
+post('/trips/:id') do
+  @trip = Trip.find(params['id'].to_i)
+  description = params['description']
+  trip_id = params['trip_id']
+  activity = Activity.create(:description => description, :trip_id => trip_id)
+  @activities = Activity.all
   erb(:trip)
+end
+
+get('/users/:id/trips') do
+  @user = User.find(params['id'].to_i)
+  @trips = @user.trips
+  erb(:trips)
 end
 
 get('/weather') do

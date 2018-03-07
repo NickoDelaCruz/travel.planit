@@ -1,0 +1,11 @@
+<h2>trips</h2>
+
+<% if @user.trips.any? %>
+  <ul>
+    <% @trips.each do |trip| %>
+    <li> <a href="/trips/<%= trip.id %>"> <%= trip.destination %></a></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p> There are no trips yet. </p>
+<% end %>
