@@ -1,48 +1,44 @@
-            <h1 class="main-head">Trips</h1>
+<h1 class="main-head">Trips</h1>
 
 <div class="ext-box">
   <div class="int-box">
-
-
-
     <div class="container">
-
       <div classs="header">
         <div class="container">
           <div class="logo">
 
           </div>
             <div class="container">
-          <form action="/user/:id" method="post">
-            <div class="form-group">
-              <label for="form-instructions">Please fill out the form!</label>
-              <br>
-              <input id="trip_description" name="trip_description" type="text" placeholder="Describe your trip">
-            </div>
-            <div class="form-group">
 
-              <input id="start_date" name="start_date" type="text" placeholder="Enter trip start date">
-            </div>
-            <div class="form-group">
+              <form action="/user/<%= @user.id %>" method="post">
 
-              <input id="end_date" name="end_date" type="text" placeholder="Enter trip end date">
-            </div>
-            <div class="form-group">
+                <div class="form-group">
+                  <label for="form-instructions">Please fill out the form!</label>
+                  <br>
+                  <input id="trip_name" name="trip_name" type="text" placeholder="Enter city">
+                </div>
 
-              <input id="latitude" name="latitude" type="text" placeholder="Enter location latitude">
-            </div>
-            <div class="form-group">
-              <input id="longitude" name="longitude" type="text" placeholder="Enter location longitude">
-            </div>
-              <button type="submit" name="submit" class="btn btn-success">Submit</button>
+                <div class="form-group">
+                  <input id="start_date" name="start_date" type="text" placeholder="Enter trip start date">
+                </div>
 
+                <div class="form-group">
+                  <input id="end_date" name="end_date" type="text" placeholder="Enter trip end date">
+                </div>
 
-               <h3>Hello <%= @name %>, let's plan your trip!!</h3>
+                <div class="form-group">
+                  <input id="latitude" name="latitude" type="text" placeholder="Enter location latitude">
+                </div>
 
+                <div class="form-group">
+                  <input id="longitude" name="longitude" type="text" placeholder="Enter location longitude">
+                </div>
 
+                  <button type="submit" name="submit" class="btn btn-success">Submit</button>
 
+               <h3>Hello <%= @user.name %>, let's plan your trip!!</h3>
 
-          </form>
+            </form>
           </div>
         </div>
       </div>
