@@ -1,6 +1,10 @@
 body {
   width: 100%;
   margin: auto;
+  background-image: url('../img/header.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: black;
 }
 
 .container {
@@ -9,7 +13,6 @@ body {
 }
 
 .header {
-  background: #6396bc;
   width: 100%;
   top: 0;
 }
@@ -20,14 +23,14 @@ body {
   font-size: 24px;
 }
 
-#main-head {
-color: #ffffff
+.main-head {
+  color: #ffffff;
+  font-size: 48px;
 }
 
-/*list {
-  text-decoration: none;
-  color: #ffffff;
-}*/
+#homepage-head {
+  color: white;
+}
 
 li {
   list-style: none;
@@ -36,6 +39,55 @@ li {
   padding-top: 15px;
 }
 
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+ul li {
+  float: left;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+}
+
 .nav {
   float: right
+}
+
+/*.well {
+  opacity: .25;
+}*/
+/*form {
+  display: inline-block;
+  margin-left: center;
+  margin-right: center;
+  text-align: center;
+}*/
+
+form {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #FFFFFF;
+  display: block;
+}
+
+ul li a:hover {
+  background-color: white;
+}
+
+ul li ul li {
+  display: none;
+}
+
+ul li:hover ul li {
+  display: block;
 }
