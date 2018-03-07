@@ -34,6 +34,12 @@ get('/trips/:id') do
   erb(:trip)
 end
 
+get('/users/:id/trips') do
+  @user = User.find(params['id'].to_i)
+  @trips = @user.trips
+  erb(:trips)
+end
+
 get('/weather') do
   @current = {}
   erb(:weather)
