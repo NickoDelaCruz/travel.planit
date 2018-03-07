@@ -9,7 +9,7 @@ get('/') do
 end
 
 post('/') do
-  @name = params['name']
+  @user = params['name']
   erb(:user)
 end
 

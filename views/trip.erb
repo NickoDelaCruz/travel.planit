@@ -4,11 +4,19 @@
       <div class="logo">
         <h1 class="main-head">Activities</h1>
       </div>
-      <!-- navigation  -->
+      <form action="/user/:id/trip" method="post">
+        <input id="user_id" name="user_id" type="hidden" value="<%= @user.id %>">
+        <label for="description"></label>
+        <input type="text" name="description">
 
-      <!-- form - activities -->
+        <button type="submit">Add Activity</button>
+      </form>
 
-      <!-- descriptions -->
+      <ul>
+        <% @activities.each do |activity| %>
+          <li><%= activity.description %></li>
+        <% end %>
+      </ul>
       </div>
     </div>
   </div>
