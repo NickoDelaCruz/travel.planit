@@ -28,9 +28,17 @@ post('/users/:id') do
 end
 
 get('/trips/:id') do
-  @activities = Activity.all
-  @user = User.find(params['id'].to_i)
   @trip = Trip.find(params['id'].to_i)
+  @activities = Activity.all
+  erb(:trip)
+end
+
+post('/trips/:id') do
+  @trip = Trip.find(params['id'].to_i)
+  description = params['description']
+  trip_id = params['trip_id']
+  activity = Activity.create(:description => description, :trip_id => trip_id)
+  @activities = Activity.all
   erb(:trip)
 end
 
