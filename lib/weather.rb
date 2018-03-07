@@ -9,11 +9,9 @@ require 'pry'
 class Weather < ActiveRecord::Base
 
 
-  def get_weather
+  def get_weather(lat, lng)
     darksky = "https://api.darksky.net/forecast/"
     key = "c8ab0a54e45119b58c074c1c58bb855a"
-    lat = 45.5231
-    lng = 122.6765
     url = "#{darksky}#{key}/#{lat},#{lng}"
 
     uri = URI.parse(url)
@@ -22,7 +20,7 @@ class Weather < ActiveRecord::Base
   end
 
   def forecast
-    weather = JSON.parse(self.get_weather)
+    weather = JSON.parse(self.get_weather(latitude, longitude))
     summary = weather['currently']['summary']
     icon = weather['currently']['icon']
     temperature = weather['currently']['temperature']

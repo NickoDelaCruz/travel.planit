@@ -29,8 +29,6 @@ post('/user/:id/trip') do
   erb(:trip)
 end
 
-
-
 get('/weather') do
   @current = {}
   erb(:weather)
@@ -41,6 +39,5 @@ post('/weather') do
   longitude = params[:longitude]
   new_weather = Weather.create(:latitude => latitude, :longitude => longitude)
   @current = new_weather.forecast
-
   erb(:weather)
 end
