@@ -4,7 +4,7 @@
       <div class="logo">
         <h1 class="main-head">Activities</h1>
       </div>
-      <form action="/user/:id/trip" method="post">
+      <form action="/trips/<%= @trip.id %>" method="post">
         <input id="user_id" name="user_id" type="hidden" value="<%= @user.id %>">
         <label for="description"></label>
         <input type="text" name="description">
