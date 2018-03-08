@@ -5,16 +5,19 @@
         <div class="container">
           <!-- <div class="well"> -->
           <div class="trip-form-well">
-            <h1> TRIPS </h1>
-            <% if @user.trips.any? %>
-              <ul>
-                <% @trips.each do |trip| %>
-                <li> <a href="/trips/<%= trip.id %>"> <%= trip.destination %></a></li>
+            <div class="well">
+              <h1> TRIPS </h1>
+              <% if @user.trips.any? %>
+                <ul>
+                  <% @trips.each do |trip| %>
+                  <li><h3><a href="/trips/<%= trip.id %>"> <%= trip.destination %></a></h3></li>
+                  <% end %>
+                </ul>
+                <% else %>
+                <h3> There are no trips yet. </h3>
                 <% end %>
-              </ul>
-              <% else %>
-              <p> There are no trips yet. </p>
-              <% end %>
+                <br>
+            </div>
           </div>
         </div>
       </div>

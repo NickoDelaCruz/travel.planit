@@ -14,11 +14,8 @@ body {
 
 h1, h2, h3 {
   color: white;
+  font-weight: bold;
 }
-
-/*#trip-bg {
-  background-color: salmon;
-}*/
 
 .container {
   max-width: 950px;
@@ -53,15 +50,21 @@ h1, h2, h3 {
 
 #homepage-head {
   color: white;
+  font-weight: bolder;
 }
 
 #trip-form-head {
   color: #ffffff;
+  font-weight: bolder;
+}
+
+form, #activity_form {
+  font-weight: bolder;
 }
 
 .trip-form-well {
   background-color: rgba(20, 20, 20, 0.25);
-  /*background-color: #bfbfbf*/
+  font-weight: bolder;
 }
 
 li {
@@ -96,7 +99,6 @@ form {
   display: block;
   text-align: center;
   margin: 0 auto;
-  /*padding: 200px;*/
   text-shadow: black;
 }
 
@@ -160,13 +162,9 @@ $third:#4426a8;
   box-sizing: border-box;
 }
 
-
-
 body {
   -webkit-font-smoothing: antialiased;
 }
-
-
 
 a.bttn {
   color:$primary;
