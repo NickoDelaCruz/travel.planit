@@ -31,6 +31,7 @@ post('/users/:id') do
 end
 
 get('/trips/:id') do
+  @current = {}
   @trip = Trip.find(params['id'].to_i)
   @activities = Activity.all
   @current = @trip.forecast
