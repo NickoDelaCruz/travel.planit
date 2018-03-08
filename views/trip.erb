@@ -8,9 +8,9 @@
             <div class="trip-form-well">
               <h2><%= @trip.destination %> Trip</h2>
               <form action="/trips/<%= @trip.id %>" method="post">
-                <input id="trip_id" name="trip_id" type="hidden" value="<%= @trip.id %>">
+                <input id="trip_id" name="trip_id" type="hidden" value="<%= @trip.id %>" style="width: 250px">
                 <label for="description"></label>
-                <input type="text" name="description" placeholder="Add Activity">
+                <input type="text" name="description" placeholder="Add Activity" style="width: 250px">
                 <button type="submit">Add</button>
                 <br>
                 <br>
