@@ -1,23 +1,27 @@
-<div class="container">
-  <div classs="header">
+<div class="ext-box">
+  <br>
+  <h1 class="main-head"><%= @trip.destination %> Trip</h1>
+  <div class="int-box">
     <div class="container">
-      <div class="logo">
-        <h1 class="main-head"><%= @trip.destination %> Trip</h1>
-      </div>
-      <p>Date of trip: <%= @trip.date %></p>
-      <form action="/trips/<%= @trip.id %>" method="post">
-        <input id="trip_id" name="trip_id" type="hidden" value="<%= @trip.id %>">
-        <label for="description"></label>
-        <input type="text" name="description">
-
-        <button type="submit">Add Activity</button>
-      </form>
-
-      <ul>
-        <% @trip.activities.each do |trip_activity| %>
-          <li><%= trip_activity.description %></li>
-        <% end %>
-      </ul>
+      <div classs="header">
+        <div class="container">
+          <div class="well">
+            <div class="trip-form-well">
+              <form action="/trips/<%= @trip.id %>" method="post">
+                <input id="trip_id" name="trip_id" type="hidden" value="<%= @trip.id %>">
+                <label for="description"></label>
+                <input type="text" name="description">
+                <button type="submit">Add Activity</button>
+              </form>
+              <p>DATE: <%= @trip.date %></p>
+              <ul>
+                <% @trip.activities.each do |trip_activity| %>
+                  <li id="activity"><%= trip_activity.description %></li>
+                <% end %>
+              </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+</div>
