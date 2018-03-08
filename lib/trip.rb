@@ -15,9 +15,9 @@ class Trip < ActiveRecord::Base
   def forecast
     weather = JSON.parse(self.get_weather(latitude, longitude))
     summary = weather['currently']['summary']
-    icon = weather['currently']['icon']
+    daily = weather['daily']['summary']
     temperature = weather['currently']['temperature']
 
-    collected_weather = { 'summary' => summary, 'icon' => icon, 'temperature' => temperature }
+    collected_weather = { 'summary' => summary, 'daily' => daily, 'temperature' => temperature }
   end
 end
