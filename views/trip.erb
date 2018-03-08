@@ -16,9 +16,9 @@
               <h3 class="details">Start date of trip: <%= @trip.start_date %></h3>
               <h3 class="details">End date of trip: <%= @trip.end_date %></h3>
               <br>
-              <h3 class="details"><%= @current['summary'] %></h3>
-              <h3 class="details"><%= @current['daily'] %></h3>
-              <h3 class="details"><%= @current['temperature'] %></h3>
+              <h3 class="details">This week: <%= @current['daily'] %></h3>
+              <h3 class="details">Currently: <%= @current['summary'] %></h3>
+              <h3 class="details">Current temperature: <%= @current['temperature'] %>°</h3>
               <ul>
                 <% @trip.activities.each do |trip_activity| %>
                   <li id="activity"><%= trip_activity.description %></li>
