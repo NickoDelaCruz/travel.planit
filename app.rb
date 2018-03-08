@@ -35,6 +35,9 @@ get('/trips/:id') do
   @trip = Trip.find(params['id'].to_i)
   @activities = Activity.all
   @current = @trip.forecast
+  user_id = @trip.user_id
+  @user = User.find(user_id.to_i)
+  binding.pry
   erb(:trip)
 end
 
