@@ -10,8 +10,8 @@
               <form action="/trips/<%= @trip.id %>" method="post">
                 <input id="trip_id" name="trip_id" type="hidden" value="<%= @trip.id %>">
                 <label for="description"></label>
-                <input type="text" name="description">
-                <button type="submit">Add Activity</button>
+                <input type="text" name="description" placeholder="Add Activity">
+                <button type="submit">ADD</button>
               </form>
               <h3 class="details">Start date of trip: <%= @trip.start_date %></h3>
               <h3 class="details">End date of trip: <%= @trip.end_date %></h3>
@@ -26,8 +26,10 @@
               </ul>
             </div>
           </div>
-          <a href="/users/<%= @user.id %>/trips">View All Trips</a>
-          <a href="/users/<%= @user.id %>">Add a Trip</a>
+          <div id="nav-trip">
+            <a href="/users/<%= @user.id %>/trips">View All Trips</a>
+            <a href="/users/<%= @user.id %>">Add a Trip</a>
+          </div>
         </div>
       </div>
     </div>
