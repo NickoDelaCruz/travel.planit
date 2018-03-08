@@ -1,23 +1,11 @@
-<div class="ext-box">
-  <div class="int-box">
-    <div class="container">
-      <div classs="header">
-        <div class="container">
-          <div class="container">
-            <h2>Trips</h2>
+<h1> TRIPS </h1>
+<% if @user.trips.any? %>
+  <ul>
+    <% @trips.each do |trip| %>
+    <li> <a href="/trips/<%= trip.id %>"> <%= trip.destination %></a></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p> There are no trips yet. </p>
+<% end %>
 
-            <% if @user.trips.any? %>
-              <ul>
-                <% @trips.each do |trip| %>
-                <li> <a href="/trips/<%= trip.id %>"> <%= trip.destination %></a></li>
-                <% end %>
-              </ul>
-            <% else %>
-              <p> There are no trips yet. </p>
-            <% end %>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
