@@ -39,15 +39,16 @@
 ## Support and contact details
 
 Support inquiries, ideas, suggestions, and other contact inquiries can be directed to any of the following individuals:
-  Masen
-    Email: masenmatthews@gmail.com.
-    Github: masenmatthews
-  Hannah
-    GitHub: RunHannah
-  Emily
-    Github: emilywatkins
-  Nicko
-    GitHub: nickodelacruz
+
+
+  * Masen: Email: masenmatthews@gmail.com, Github: masenmatthews
+
+  * Hannah: GitHub: RunHannah
+
+  * Emily: Github: emilywatkins
+
+  * Nicko: GitHub: nickodelacruz
+
 
 ## Technologies Used
 
