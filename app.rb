@@ -21,15 +21,19 @@ end
 
 post('/users/:id') do
   destination = params['trip_name']
-  date = params['start_date']
+  start_date = params['start_date']
+  end_date = params['end_date']
   user_id = params['user_id']
-  trip = Trip.create(:destination => destination, :date => date, :user_id => user_id)
+  latitude = params['latitude']
+  longitude = params['longitude']
+  trip = Trip.create(:destination => destination, :start_date => start_date, :end_date => end_date, :latitude => latitude, :longitude => longitude, :user_id => user_id)
   redirect("/trips/".concat(trip.id.to_s))
 end
 
 get('/trips/:id') do
   @trip = Trip.find(params['id'].to_i)
   @activities = Activity.all
+  @current = @trip.forecast
   erb(:trip)
 end
 
@@ -46,17 +50,4 @@ get('/users/:id/trips') do
   @user = User.find(params['id'].to_i)
   @trips = @user.trips
   erb(:trips)
-end
-
-get('/weather') do
-  @current = {}
-  erb(:weather)
-end
-
-post('/weather') do
-  latitude = params[:latitude]
-  longitude = params[:longitude]
-  new_weather = Weather.create(:latitude => latitude, :longitude => longitude)
-  @current = new_weather.forecast
-  erb(:weather)
 end
