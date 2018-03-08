@@ -43,6 +43,7 @@ post('/trips/:id') do
   trip_id = params['trip_id']
   activity = Activity.create(:description => description, :trip_id => trip_id)
   @activities = Activity.all
+  @current = @trip.forecast
   erb(:trip)
 end
 
