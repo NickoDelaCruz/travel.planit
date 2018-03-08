@@ -34,3 +34,13 @@ describe 'the activity creation path', {:type => :feature} do
     expect(page).to have_content('eat')
   end
 end
+
+describe 'the trips page', {:type => :feature} do
+  it 'takes the user to their trips page where they can see all saved trips' do
+    test_user = User.create({:name => 'emily'})
+    user_id = test_user.id.to_i
+    test_trip = Trip.create({:destination => 'portland', :latitude => 45.5231, :longitude => -122.6765, :user_id => user_id})
+    visit "/users/#{user_id}/trips"
+    expect(page).to have_content('portland')
+  end
+end
