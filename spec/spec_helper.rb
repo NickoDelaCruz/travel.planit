@@ -13,11 +13,14 @@ Dir[File.dirname(__FILE__) + '/../lib/*.rb'].each { |file| require file }
 
 RSpec.configure do |config| # clear db between spec runs
   config.after(:each) do
-    # Store.all.each do |store|
-    #   store.destroy
-    # end
-    # Brand.all.each do |brand|
-    #   brand.destroy
-    # end
+    User.all.each do |user|
+      user.destroy
+    end
+    Trip.all.each do |trip|
+      trip.destroy
+    end
+    Activity.all.each do |activity|
+      activity.destroy
+    end
   end
 end
