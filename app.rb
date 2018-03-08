@@ -37,7 +37,6 @@ get('/trips/:id') do
   @current = @trip.forecast
   user_id = @trip.user_id
   @user = User.find(user_id.to_i)
-  binding.pry
   erb(:trip)
 end
 
@@ -48,6 +47,8 @@ post('/trips/:id') do
   activity = Activity.create(:description => description, :trip_id => trip_id)
   @activities = Activity.all
   @current = @trip.forecast
+  user_id = @trip.user_id
+  @user = User.find(user_id.to_i)
   erb(:trip)
 end
 
