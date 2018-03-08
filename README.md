@@ -12,7 +12,7 @@
   * Input example: Hannah
   * Output example: "Hello, Hannah. Let's plan your trip!"
 
-2. User can enter a destination name, date range, and longitude/latitude to establish a trip.
+2. User can enter a destination name, date range, and longitude/latitude to establish a trip
   * Input example: "Seattle, 3/13/18-3/18/18, 47.6062, -122.3321"
   * Output example: "Seattle trip"
 
@@ -20,15 +20,21 @@
   * Input example: 3/13/18 - 3/18/18
   * Output example: "Moderate rain, cloudy skies, daytime highs in the mid 50's, nighttime lows in the lower 40s."
 
+4. User can add activities to their trip
+  * Input example: "Seattle trip" -> "Paddleboarding, hiking"
+  * Output example: "Activities: Paddleboarding, hiking"
+
 ## Setup/Installation Requirements
 
 * _Clone GitHub repository to desktop or desired directory_
-* _Navigate to directory in terminal and launch site using the ruby app.rb command_
-* _Open browser and navigate to localhost URL_
-* _View database using psql in the terminal_
-* _Alternatively, view the site using Heroku without installing it locally_
+* _Navigate to directory in terminal_
+* _Ensure that Postgres is running and launch database using the 'rake db:migrate' command in the terminal_
+* _Ensure that gems are installed by running "bundle" in the terminal_
+* _Launch application in Sinatra by entering the "ruby app.rb" command_
+* _Navigate to webpage in browser by navigating to localhost:4567_
 
 ## Known Bugs
+*_Styling does not render correctly on the "trips" page. This is likely due to a browser or routing issue, but attempting to fix it falls outside of the scope of the project. Attempts to remedy the issue may occur at a later date._*
 
 ## Support and contact details
 
