@@ -8,7 +8,6 @@ require 'pry'
 
 class Weather < ActiveRecord::Base
 
-
   def get_weather(lat, lng)
     darksky = "https://api.darksky.net/forecast/"
     key = "c8ab0a54e45119b58c074c1c58bb855a"
